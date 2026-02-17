@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art & Craft Portfolio</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="logo">Aishwarya Jain</div>
+    </nav>
+
+    <header>
+        <h1>Crafting with Paper</h1>
+        <p>A showcase of tactile art and intricate paper designs.</p>
+    </header>
+
+    <section id="gallery" class="container">
+        <div class="filter-buttons">
+            <button class="btn active" onclick="filterSelection('all')">All Work</button>
+            <button class="btn" onclick="filterSelection('paper')">Paper Art</button>
+            <button class="btn" onclick="filterSelection('sketches')">Sketches</button>
+        </div>
+
+        <div class="photo-grid" id="imageGallery"></div>
+        <div class="w3-center w3-padding-32">
+        <div class="w3-bar" id="pagination">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <hr>
+        <div class="about-content">
+            <h2>About the Artist</h2>
+            <p>I am a multidisciplinary creator focusing on the intersection of physical materials and visual storytelling. My work explores the possibilities of paper as a medium for 3D structures and intricate patterns.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aishwarya Jain | Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
