@@ -1,4 +1,3 @@
-// 1. List your image filenames here
 const images = {
   "paper": {
     "images": [
@@ -18,21 +17,57 @@ const images = {
       'cards_2.jpeg',
       'cards_3.jpeg'],
     "alt": "Cards"
-  }
+  },
+  "jewellery": {
+    "images":[
+      'jewellery_1.jpeg',
+      'jewellery_2.jpeg'],
+    "alt": "Jwellery"
+  },
+  "stone": {
+    "images":[
+      'stone_art_1.jpeg',
+      'stone_art_2.jpeg'],
+    "alt": "Stone Art"
+  },
+  "wall": {
+    "images":[
+      'wall_art_1.jpeg',
+      'wall_art_2.jpeg',
+      'wall_art_3.jpeg',
+      'wall_art_4.jpeg',
+      'wall_art_5.jpeg',
+      'wall_art_6.jpeg',
+      'wall_art_7.jpeg'],
+    "alt": "Wall Art"
+  },
+  "selfi_point": {
+    "images":[
+      'selfi_point_1.jpeg',
+      'selfi_point_2.jpeg'],
+    "alt": "Selfi Point"
+  },
+  "decorative_items": {
+    "images":[
+      'decorative_items_1.jpeg',
+      'decorative_items_2.jpeg',
+      'decorative_items_3.jpeg',
+      'decorative_items_4.jpeg'],
+    "alt": "Decorative Items"
+  },
 }
 
 const folder = 'photos_art';
 
 let currentPage = 1;
-const imagesPerPage = 2; // Adjust this number based on your preference
+let imagesPerPage = 3;
 let currentCategory = 'all';
 
-// 2. Load Gallery with Pagination
+// Load Gallery with Pagination
 function loadGallery() {
     const gallery = document.getElementById('imageGallery');
-    gallery.innerHTML = ""; // Clear existing
+    gallery.innerHTML = ""; 
     
-    // Flatten all images into one list or filter by category
     let allImages = [];
     for (const [key, value] of Object.entries(images)) {
         if (currentCategory === 'all' || currentCategory === key) {
@@ -76,13 +111,11 @@ function renderPagination(totalItems) {
     }
 }
 
-// 4. Updated Filtering Logic for Pagination
 function filterSelection(c) {
     currentCategory = c;
     currentPage = 1; // Reset to page 1 on filter change
     loadGallery();
     
-    // Update active button styling
     var btns = document.querySelectorAll(".filter-buttons .btn");
     btns.forEach(btn => {
         btn.classList.remove("active");
@@ -90,16 +123,6 @@ function filterSelection(c) {
     });
 }
 
-// 3. W3.CSS Sidebar Logic
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-}
-
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-
-// 5. Active Button Styling
 var btnContainer = document.querySelector(".filter-buttons");
 if (btnContainer) {
     var btns = btnContainer.getElementsByClassName("btn");
@@ -111,8 +134,6 @@ if (btnContainer) {
         });
     }
 }
-
-// Initialize everything
 
 window.onload = loadGallery;
 
