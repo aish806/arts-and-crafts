@@ -21,7 +21,8 @@ const images = {
   "jewellery": {
     "images":[
       'jewellery_1.jpeg',
-      'jewellery_2.jpeg'],
+      'jewellery_2.jpeg',
+      'jewellery_3.jpeg'],
     "alt": "Jwellery"
   },
   "stone": {
@@ -136,4 +137,5 @@ if (btnContainer) {
 }
 
 window.onload = loadGallery;
+
 
