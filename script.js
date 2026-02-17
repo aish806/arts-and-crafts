@@ -12,12 +12,12 @@ const images = {
       'paper_art_7.jpeg'],
     "alt": "Paper Art"
   },
-  "sketches": {
+  "cards": {
     "images":[
-      'image_1.png',
-      'image_1.png',
-      'image_1.png'],
-    "alt": "Sketch"
+      'cards_1.jpeg',
+      'cards_2.jpeg',
+      'cards_3.jpeg'],
+    "alt": "Cards"
   }
 }
 
@@ -115,3 +115,4 @@ if (btnContainer) {
 // Initialize everything
 
 window.onload = loadGallery;
+
